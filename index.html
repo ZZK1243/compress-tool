@@ -211,16 +211,10 @@
     text-align: center; width: 200px; transition: all var(--transition);
   }
   .donation-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
-  .donation-card .qr-placeholder {
-    width: 150px; height: 150px; margin: 0 auto 10px;
-    border-radius: 8px; border: 2px dashed var(--border);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text-secondary); font-size: 12px;
-    background: var(--bg); cursor: pointer;
-    transition: all var(--transition);
-  }
-  .donation-card .qr-placeholder:hover {
-    border-color: var(--accent); color: var(--accent);
+  .donation-card .qr-img {
+    width: 180px; height: 180px; margin: 0 auto 10px;
+    border-radius: 8px; display: block;
+    border: 1px solid var(--border);
   }
   .donation-card .pay-label {
     font-size: 14px; font-weight: 600; color: var(--text);
@@ -307,26 +301,12 @@
     <div class="donation-sub">这个工具完全免费、无广告、不偷数据。你的支持是我继续更新的动力</div>
     <div class="donation-cards">
       <div class="donation-card">
-        <div class="qr-placeholder" title="请替换为你的微信收款码">
-          <svg width="120" height="120" viewBox="0 0 120 120">
-            <rect width="120" height="120" rx="8" fill="#f0f0f0"/>
-            <text x="60" y="54" text-anchor="middle" font-size="11" fill="#999">微信</text>
-            <text x="60" y="72" text-anchor="middle" font-size="11" fill="#999">收款码</text>
-            <text x="60" y="94" text-anchor="middle" font-size="9" fill="#ccc">替换此图</text>
-          </svg>
-        </div>
+        <img class="qr-img" src="wechat.jpg" alt="微信收款码" loading="lazy">
         <div class="pay-label">微信赞赏</div>
         <div class="pay-hint">打开微信扫一扫</div>
       </div>
       <div class="donation-card">
-        <div class="qr-placeholder" title="请替换为你的支付宝收款码">
-          <svg width="120" height="120" viewBox="0 0 120 120">
-            <rect width="120" height="120" rx="8" fill="#f0f0f0"/>
-            <text x="60" y="54" text-anchor="middle" font-size="11" fill="#999">支付宝</text>
-            <text x="60" y="72" text-anchor="middle" font-size="11" fill="#999">收款码</text>
-            <text x="60" y="94" text-anchor="middle" font-size="9" fill="#ccc">替换此图</text>
-          </svg>
-        </div>
+        <img class="qr-img" src="alipay.jpg" alt="支付宝收款码" loading="lazy">
         <div class="pay-label">支付宝转账</div>
         <div class="pay-hint">打开支付宝扫一扫</div>
       </div>
